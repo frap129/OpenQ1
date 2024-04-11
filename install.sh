@@ -11,6 +11,8 @@ fi
 
 rm $config_path/printer.cfg
 rm $config_path/moonraker.conf
+rm $config_path/crowsnest.conf
 cp $pwd/config/printer.cfg $config_path
 ln -s $pwd/config/moonraker.conf $config_path/moonraker.conf
+ln -s $pwd/config/crowsnest.conf $config_path/crowsnest.conf
 ln -s $pwd/config $config_path/q1-pro
