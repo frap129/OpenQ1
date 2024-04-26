@@ -62,10 +62,10 @@ This is the hardest part of the installation, as it requires soldering. It's onl
 3. Disconnect all of the connectors on the toolhead board. They are all color coded, so don't worry about remembering what went where.
 4. Remove the 3 screws that hold the toolhead board on.
 5. Remove the toolhead board.
-6. Cuta section of 4 pins off of a strip of pin headers. Be sure to use straight ones, as the angled ones will not fit with the rear cover of the toolhead. Leave all 4 connected to one another.
+6. Cut a section of 4 pins off of a strip of pin headers. Be sure to use straight ones, as the angled ones will not fit with the rear cover of the toolhead. Leave all 4 connected to one another.
 7. Solder them onto the toolhead board using the holes labeled D-, D+, 5V, GND. Make sure the long ends of the pins are on the same side as all of the other connectors, with the short ends going through the holes.
 
-You're done! Put it all back together, but make sure to leave the back cover off for the next step.
+You're done! Re-attach the board to the toolhead with the three screws, plug in all of the connectors, but make sure to leave the back cover off for the next step.
 
 
 ## Part 4: Flashing the Toolhead MCU
@@ -87,7 +87,7 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 	7. If that command gives an error, you need to repeat step 3 (holding the boot button and hitting reset)
 	8. `sudo cp out/katapult.uf2 /mnt`
 	9. `sudo umount /mnt`
-	10. Don't worry if the `umount` command gives an error. The toolhead will automatically unmount on its own after a while, so it may have already unmounted but the time you run it.
+	10. Don't worry if the `umount` command gives an error. The toolhead will automatically unmount on its own after a while, so it may have already unmounted by the time you run it.
 5. On the same SSH session, we'll install klipper.
 	1. `cd ../klipper`
 	2. `cp ~/openq1/mcu_configs/.config.toolhead .config`
