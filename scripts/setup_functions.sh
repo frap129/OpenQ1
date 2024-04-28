@@ -2,10 +2,6 @@
 
 CONFIG_PATH=${CONFIG_PATH:="/home/$USER/printer_data/config"}
 
-wifi_driver_dkms_setup() {
-	deb-get install aic8800-usb-dkms aic8800-firmware
-}
-
 kiauh_setup() {
 	cd /home/$USER
 	git clone https://github.com/dw-0/kiauh
@@ -63,15 +59,14 @@ auto_z_offset_setup() {
 	ln -s /home/$USER/qidi_auto_z_offset/auto_z_offset.py /home/$USER/klipper/klippy/extras/auto_z_offset.py
 }
 
-# Arg 1: path to OpenQ1 checkout
 config_setup() {
 	rm $CONFIG_PATH/printer.cfg
 	rm $CONFIG_PATH/moonraker.conf
 	rm $CONFIG_PATH/crowsnest.conf
-	cp $1/config/printer.cfg $CONFIG_PATH
-	ln -s $1/config/moonraker.conf $CONFIG_PATH/moonraker.conf
-	ln -s $1/config/crowsnest.conf $CONFIG_PATH/crowsnest.conf
-	ln -s $1/config $CONFIG_PATH/q1-pro
+	cp $OPENQ1_PATH/config/printer.cfg $CONFIG_PATH
+	ln -s $OPENQ1_PATH/config/moonraker.conf $CONFIG_PATH/moonraker.conf
+	ln -s $OPENQ1_PATH/config/crowsnest.conf $CONFIG_PATH/crowsnest.conf
+	ln -s $OPENQ1_PATH/config $CONFIG_PATH/q1-pro
 }
 
 kamp_setup() {
@@ -96,4 +91,8 @@ shellcmd_setup() {
 	cd /home/$USER
 	source $KIAUH_SRCDIR/scripts/gcode_shell_command.sh
 	yes n | install_gcode_shell_command
+}
+
+user_func_setup() {
+	echo "source $OPENQ1_PATH/scripts/user_functions.sh" >>~/.bashrc
 }
