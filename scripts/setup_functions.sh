@@ -94,5 +94,6 @@ shellcmd_setup() {
 }
 
 user_func_setup() {
-	echo "source $OPENQ1_PATH/scripts/user_functions.sh" >>~/.bashrc
+	echo "source $OPENQ1_PATH/scripts/firstlogin.sh" >> ~/.bashrc
+	echo "first_login" >> ~/.bashrc
 }
