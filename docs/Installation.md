@@ -99,3 +99,8 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 	8. Wait for the script to finish flashing klipper.
 
 All done! Remove the USB cable, put the rear cover back on, and reboot the printer.
+
+## Post Install
+
+### Camera Setup
+In Fluidd, go to settings and add a new camera. You can leave all of the settings default, other than setting a name. Once added, the camera should appear on the dashboard. If it does not, try rebooting the printer.
