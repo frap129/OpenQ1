@@ -116,10 +116,10 @@ _setup_passwds() {
 }
 
 first_login() {
-    while [ -f "/root/.not_logged_in_yet" ]; do
+    if [ -f "/home/$USER/.not_logged_in_yet" ]; then
         _setup_passwds
         _set_timezone_and_locales
         rm ~/.not_logged_in_yet
-    done
+    fi
 }
 
