@@ -94,7 +94,13 @@ shellcmd_setup() {
 }
 
 user_func_setup() {
-	echo "source $OPENQ1_PATH/scripts/firstlogin.sh" >>~/.bashrc
-	echo "first_login" >>~/.bashrc
+	cd /home/$USER
+	echo "source $OPENQ1_PATH/scripts/firstlogin.sh" >>/home/$USER/.bashrc
+	echo "first_login" >>/home/$USER/.bashrc
 	touch /home/$USER/.not_logged_in_yet
+}
+
+katapult_setup() {
+	cd /home/$USER
+	git clone https://github.com/Arksine/katapult
 }
