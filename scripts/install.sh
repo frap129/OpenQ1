@@ -17,3 +17,5 @@ config_setup
 kamp_setup
 shellcmd_setup
 shaketune_setup
+katapult_setup
+first_login_setup

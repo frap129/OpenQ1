@@ -93,7 +93,7 @@ shellcmd_setup() {
 	yes n | install_gcode_shell_command
 }
 
-user_func_setup() {
+first_login_setup() {
 	cd /home/$USER
 	echo "source $OPENQ1_PATH/scripts/firstlogin.sh" >>/home/$USER/.bashrc
 	echo "first_login" >>/home/$USER/.bashrc
