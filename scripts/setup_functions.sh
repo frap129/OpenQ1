@@ -94,6 +94,7 @@ shellcmd_setup() {
 }
 
 user_func_setup() {
-	echo "source $OPENQ1_PATH/scripts/firstlogin.sh" >> ~/.bashrc
-	echo "first_login" >> ~/.bashrc
+	echo "source $OPENQ1_PATH/scripts/firstlogin.sh" >>~/.bashrc
+	echo "first_login" >>~/.bashrc
+	touch /home/$USER/.not_logged_in_yet
 }
