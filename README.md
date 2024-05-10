@@ -13,10 +13,10 @@ The goal of this project is to create custom, community supported firmware for t
     - Moonraker
     - Fluidd
     - Crowsnest
-    - mookeraker-timelapse
+    - moonraker-timelapse
     - KAMP
     - Shake&Tune
-    - QIDI Auto Z Offset all preinstalled
+    - QIDI Auto Z Offset all preinstalled (https://github.com/frap129/qidi_auto_z_offset)
 - Improved Q1 Pro klipper config and macros
 - All stock features of the Q1 Pro, except
     - Power loss recovery was hacky at best on the stock fimrware, and is not included.
