@@ -118,7 +118,7 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 	5. `make -j4`
 	6. `cd ~/katapult`
 	7. `sudo apt install python3-serial`
-	8. `python3 scripts/flashtool.py -d /dev/ttyACM0 -f ~/klipper/out/klipper.uf2`
+	8. `python3 scripts/flashtool.py -d /dev/ttyS2 -f ~/klipper/out/klipper.uf2`
 	9. Wait for the script to finish flashing klipper.
 
 All done! Remove the USB cable, put the rear cover back on, and reboot the printer.
