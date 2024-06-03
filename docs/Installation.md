@@ -49,8 +49,8 @@ Once the printer is on, you'll need to find its IP. This can be done using your 
 	2. `cp ~/OpenQ1/mcu_configs/.config.mainboard.klipper .config`
 	3. `make menuconfig`
 	4. Verify that your config matches the following image. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
-![](images/config_mainboard_klipper.png)
-	5. `make -j4`
+		-![](images/config_mainboard_klipper.png)
+  5. `make -j4`
 4. Once that's done, copy the file `~/klipper/out/klipper.bin` to your computer using your preferred tool.
 	One way to download klipper.bin easily without any additional tool is: `cp out/klipper.bin ~/printer_data/config/`, fluidd is already running, download it from the GUI
 5. Format your micro SD card as FAT32
@@ -102,7 +102,7 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 	2. `cp ~/OpenQ1/mcu_configs/.config.toolhead.katapult .config`
 	3. `make menuconfig`
 	4. Verify that your config matches the following image. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
-![](images/config_toolhead_katapult.png)
+		- ![](images/config_toolhead_katapult.png)
 	5. `make -j4`
 	6. `sudo mount /dev/sda1 /mnt` (use `sudo dmesg` to check whether toolhead restarted)
 	7. If that command gives an error, you need to repeat step 3 (holding the boot button and hitting reset)
@@ -114,7 +114,7 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 	2. `cp ~/OpenQ1/mcu_configs/.config.toolhead.klipper .config`
 	3. `make menuconfig`
 	4. Verify that your config matches the following image. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
-![](images/config_toolhead_klipper.png)
+		- ![](images/config_toolhead_klipper.png)
 	5. `make -j4`
 	6. `cd ~/katapult`
 	7. `sudo apt install python3-serial`
