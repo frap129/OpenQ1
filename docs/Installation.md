@@ -40,9 +40,10 @@ Once the printer is on, you'll need to find its IP. This can be done using your 
 2. You will be asked to change your password when you log in. Make sure you remember this.
 3. Once ssh'd into the printer, run the following commands to build klipper for the MCU
 	1. `cd klipper`
-	2. `cp ~/openq1/mcu_configs/.config.mainboard .config`
+	2. `cp ~/OpenQ1/mcu_configs/.config.mainboard.klipper .config`
 	3. `make menuconfig`
-	4. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
+	4. Verify that your config matches the following image. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
+![](images/config_mainboard_klipper.png)
 	5. `make -j4`
 4. Once that's done, copy the file `~/klipper/out/klipper.bin` to your computer using your preferred tool.
 5. Format your micro SD card as FAT32
@@ -79,9 +80,10 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 3. There are two buttons just below the pins and the UART connector. Hold the "BOOT" button (the one on the left), and click the "RESET " button. You may release the boot button after you click reset.
 4. SSH into the printer, and run the following commands to build katapult
 	1. `cd katapult`
-	2. `cp ~/openq1/mcu_configs/.config.toolhead .config`
+	2. `cp ~/OpenQ1/mcu_configs/.config.toolhead.katapult .config`
 	3. `make menuconfig`
-	4. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
+	4. Verify that your config matches the following image. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
+![](images/config_toolhead_katapult.png)
 	5. `make -j4`
 	6. `sudo mnt /dev/sda1 /mnt`
 	7. If that command gives an error, you need to repeat step 3 (holding the boot button and hitting reset)
@@ -90,9 +92,10 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 	10. Don't worry if the `umount` command gives an error. The toolhead will automatically unmount on its own after a while, so it may have already unmounted by the time you run it.
 5. On the same SSH session, we'll install klipper.
 	1. `cd ../klipper`
-	2. `cp ~/openq1/mcu_configs/.config.toolhead .config`
+	2. `cp ~/OpenQ1/mcu_configs/.config.toolhead.klipper .config`
 	3. `make menuconfig`
-	4. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
+	4. Verify that your config matches the following image. You do not need to change anything, this is just to make sure the config is up to date. Press `q` and then `y` to save and quit.
+![](images/config_toolhead_klipper.png)
 	5. `make -j4`
 	6. `cd ../katapult`
 	7. `python3 scripts/flashtool.py -d /dev/ttyS2 -f ~/klipper/out/klipper.bin`
