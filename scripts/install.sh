@@ -14,7 +14,6 @@ crowsnest_setup
 timelapse_setup
 auto_z_offset_setup
 config_setup
-kamp_setup
 shellcmd_setup
 shaketune_setup
 katapult_setup

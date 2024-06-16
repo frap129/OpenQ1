@@ -14,7 +14,6 @@ The goal of this project is to create custom, community supported firmware for t
     - Fluidd
     - Crowsnest
     - moonraker-timelapse
-    - KAMP
     - Shake&Tune
     - [QIDI Auto Z Offset](https://github.com/frap129/qidi_auto_z_offset)
 - Improved Q1 Pro klipper config and macros
