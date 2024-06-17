@@ -69,13 +69,6 @@ config_setup() {
 	ln -s $OPENQ1_PATH/config $CONFIG_PATH/q1-pro
 }
 
-kamp_setup() {
-	cd /home/$USER
-	git clone https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
-	ln -s /home/$USER/Klipper-Adaptive-Meshing-Purging/Configuration /home/$USER/printer_data/config/KAMP
-	cp /home/$USER/Klipper-Adaptive-Meshing-Purging/Configuration/KAMP_Settings.cfg /home/$USER/printer_data/config/KAMP_Settings.cfg
-}
-
 shaketune_setup() {
 	cd /home/$USER
 	git clone https://github.com/Frix-x/klippain-shaketune/ klippain_shaketune
