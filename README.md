@@ -24,5 +24,5 @@ The goal of this project is to create custom, community supported firmware for t
 # How to install:
 Follow the [installation guide](docs/Installation.md). Note that this is still in testing, bugs are to be expected. Please report issues and feature requests in this repo.
 
-
-
+### Calibrate Z Offset
+Unlike the stock firmware, you must manually run Z offset calibration. This step is not optional. See the explanation and guide here: [Calibrating Z Offset](docs/Calibrating-Z-Offset.md)
