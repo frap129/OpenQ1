@@ -10,4 +10,6 @@ To calibrate the Z Offset:
 6. Run `SAVE_CONFIG` to save the measured offset.
     - Note, this does not modify the `z_offset` of the inductive probe in your config. This value is only used by
     `auto_z_offset`
+7. You can make adujstments to the offset by micro-stepping durring a print, and save them with `AUTO_Z_SAVE_GCODE_OFFSET` and `SAVE_CONFIG`
 
+See [qidi_auto_z_offset](https://github.com/frap129/qidi_auto_z_offset) for more information and advanced usage
