@@ -4,7 +4,7 @@ Unlike how the stock firmware automatically sets the Z Offset for the probe ever
 To calibrate the Z Offset:
 1. Heat the extruder to a reasonable temperature that wont ooze (160+)
 2. Home all axes
-3. Run `AUTO_Z_CALIBRATE_OFFSET`
+3. Run `AUTO_Z_CALIBRATE`
 4. Move Z to 0
 5. Verify that you can slide a piece of paper under the nozzle
 6. Run `SAVE_CONFIG` to save the measured offset.
