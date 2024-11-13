@@ -125,6 +125,10 @@ All done! Remove the USB cable, put the rear cover back on, and reboot the print
 
 ## Post Install
 
+### Update All
+
+In Fluidd, go to Settings > Software Updates and hit UPDATE ALL.
+
 ### Camera Setup
 In Fluidd, go to settings and add a new camera. You can leave all of the settings default, other than setting a name. Once added, the camera should appear on the dashboard. If it does not, try rebooting the printer.
 
