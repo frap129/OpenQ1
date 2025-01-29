@@ -134,4 +134,4 @@ In Fluidd, go to Settings > Software Updates and hit UPDATE ALL.
 In Fluidd, go to settings and add a new camera. You can leave all of the settings default, other than setting a name. Once added, the camera should appear on the dashboard. If it does not, try rebooting the printer.
 
 ### Calibrate Z Offset
-Unlike the stock firmware, you must manually run Z offset calibration. This step is not optional. See the explanation and guide here: [Calibrating Z Offset](docs/Calibrating-Z-Offset.md)
+Unlike the stock firmware, you must manually run Z offset calibration. This step is not optional. See the explanation and guide here: [Calibrating Z Offset](./Calibrating-Z-Offset.md).
