@@ -25,4 +25,7 @@ The goal of this project is to create custom, community supported firmware for t
 Follow the [installation guide](docs/Installation.md). Note that this is still in testing, bugs are to be expected. Please report issues and feature requests in this repo.
 
 ### Calibrate Z Offset
-Unlike the stock firmware, you must manually run Z offset calibration. This step is not optional. See the explanation and guide here: [Calibrating Z Offset](docs/Calibrating-Z-Offset.md)
+Unlike the stock firmware, you must manually run Z offset calibration. This step is not optional. See the explanation and guide here: [Calibrating Z Offset](docs/Calibrating-Z-Offset.md).
+
+### Change Slicer Settings
+OpenQ1 makes some changes to the `PRINT_START` and `PRINT_END` macros that don't always behave well with the default slicer settings. It is recommended that you change them, following the guide here: [Slicer Setup](docs/Slicer-Setup.md).
