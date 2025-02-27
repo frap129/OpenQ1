@@ -118,9 +118,8 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 	5. `make -j4`
 	6. `cd ~/katapult`
 	7. `sudo apt install python3-serial`
+	8. `sudo systemctl stop klipper`
 	8. `python3 scripts/flashtool.py -d /dev/ttyS2 -f ~/klipper/out/klipper.bin`
-	  - Note: Klipper may try to take control of the device, causing the above command to fail. If you run into issues, run `systemctl stop klipper`
-	9. Wait for the script to finish flashing klipper.
 
 All done! Remove the USB cable, put the rear cover back on, and reboot the printer.
 
@@ -134,4 +133,7 @@ In Fluidd, go to Settings > Software Updates and hit UPDATE ALL.
 In Fluidd, go to settings and add a new camera. You can leave all of the settings default, other than setting a name. Once added, the camera should appear on the dashboard. If it does not, try rebooting the printer.
 
 ### Calibrate Z Offset
-Unlike the stock firmware, you must manually run Z offset calibration. This step is not optional. See the explanation and guide here: [Calibrating Z Offset](./Calibrating-Z-Offset.md).
+Unlike the stock firmware, you must manually run Z offset calibration. This step is not optional, unless you plan on using the paper test instead. See the explanation and guide here: [Calibrating Z Offset](./Calibrating-Z-Offset.md).
+
+### Change Slicer Settings
+OpenQ1 makes some changes to the `PRINT_START` and `PRINT_END` macros that don't always behave well with the default slicer settings. It is recommended that you change them, following the guide here: [Slicer Setup](./Slicer-Setup.md).
