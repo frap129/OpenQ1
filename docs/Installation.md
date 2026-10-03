@@ -21,7 +21,7 @@ I have recommended common software for these purposes that have ample documentat
 
 
 ## Part 1: Installing the Armbian image
-The mainboard of the Q1 is a modified version of the MKS Pi, with an onboard STM32F402 MCU, so a custom build of Armbian is required. The image provided by this project has everything you need preinstalled, including Klipper, Moonraker, Fluidd, Crowsnest, moonraker-timelapse, KAMP, Shake&Tune, QIDI Auto Z Offset, and the printer config. You can download the latest image [here](https://github.com/frap129/armbian_qidi-q1-pro/releases).
+The mainboard of the Q1 is a modified version of the MKS Pi, with an onboard STM32F402 MCU, so a custom build of Armbian is required. The image provided by this project has everything you need preinstalled, including Klipper, Moonraker, Fluidd, Crowsnest, moonraker-timelapse, Shake&Tune, QIDI Auto Z Offset, and the printer config. You can download the latest image [here](https://github.com/frap129/armbian_qidi-q1-pro/releases).
 
 1. Using the included Allen wrenches (2mm, 2.5mm) that came with the printer, remove all of the screws that hold the back panel of the printer on. There are screws on the sides of the printer, and some on the back. You do not need to remove the screws that hold the spool holder on. 
 2. Remove the 2 screws that attach the EMMC module to the mainboard
@@ -119,7 +119,7 @@ Unlike the mainboard MCU, we are going to install katapult, a special bootloader
 	6. `cd ~/katapult`
 	7. `sudo apt install python3-serial`
 	8. `sudo systemctl stop klipper`
-	8. `python3 scripts/flashtool.py -d /dev/ttyS2 -f ~/klipper/out/klipper.bin`
+	9. `python3 scripts/flashtool.py -d /dev/ttyS2 -f ~/klipper/out/klipper.bin`
 
 All done! Remove the USB cable, put the rear cover back on, and reboot the printer.
 
