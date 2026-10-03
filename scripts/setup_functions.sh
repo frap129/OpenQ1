@@ -4,7 +4,8 @@ CONFIG_PATH=${CONFIG_PATH:="/home/$USER/printer_data/config"}
 
 kiauh_setup() {
 	cd /home/$USER
-	git clone https://github.com/dw-0/kiauh
+	# KIAUH v6 is written in python and no longer ships the bash scripts used below
+	git clone --depth 1 -b v5.1.10 https://github.com/dw-0/kiauh
 }
 
 prepare_kiauh_env() {
@@ -73,10 +74,15 @@ shaketune_setup() {
 	cd /home/$USER
 	git clone https://github.com/Frix-x/klippain-shaketune/ klippain_shaketune
 	cd klippain_shaketune
-	head -n -9 install.sh >tmp-install.sh
-	echo "setup_venv
-	link_extension" >>tmp-install.sh
-	source tmp-install.sh
+	# Use the functions from the upstream installer, but skip its run steps (apt, updater
+	# entry and service restarts). Run in a subshell, since install.sh sets -eu.
+	sed '/^# Run steps/,$d' install.sh >tmp-install.sh
+	(
+		source tmp-install.sh
+		setup_venv
+		link_extension
+		link_module
+	) || echo "Shake&Tune setup failed, run ~/klippain_shaketune/install.sh manually"
 	rm tmp-install.sh
 }
 
